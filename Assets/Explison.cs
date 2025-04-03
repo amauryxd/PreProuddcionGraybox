@@ -4,15 +4,8 @@ using UnityEngine;
 
 public class Explison : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void Explotar(){
+        Debug.Log("bum");
+        GetComponent<Rigidbody>().AddExplosionForce(Random.Range(5,25),this.transform.position,Random.Range(5,25));
     }
 }
