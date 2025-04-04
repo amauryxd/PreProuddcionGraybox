@@ -8,12 +8,8 @@ public class ExplisionEvent : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Player")){
-            Debug.Log("hello");
-            //foreach(GameObject caja in cajas){
-                //caja.GetComponent<Explison>().Explotar();
-            //}
-            for(int i = 0; i < cajas.Length; i++){
-                cajas[i].GetComponent<Explison>().Explotar();
+            foreach(GameObject caja in cajas){
+                caja.GetComponent<Explison>().Explotar();
             }
         }
     }
